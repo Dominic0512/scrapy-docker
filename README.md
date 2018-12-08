@@ -9,8 +9,14 @@ docker-compose up -d
 ```
 ### Step2: Enter scrapyapp container and running scrapy crawler
 ```
-docker ps 
+docker ps
 docker exec -it {scrapyapp_container_id} /bin/sh
 cd /home/src/ExampleCrawler
 scrapy crawl example
+```
+
+### Create new crawler in docker container
+```
+cd /home/src
+scrapy genspider example example.com
 ```
